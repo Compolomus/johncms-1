@@ -31,10 +31,10 @@
     "require": {
         "php": "^7.2",
         "ext-gd": "*",
+        "ext-iconv": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
         "ext-pdo": "*",
-        "ext-iconv": "*",
         "ext-simplexml": "*",
         "aura/autoload": "^2.0",
         "intervention/image": "^2.5",
