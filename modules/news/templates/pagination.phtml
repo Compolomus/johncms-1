@@ -1,0 +1,24 @@
+<?php
+$baseURL = array_pop($pages);
+?><ul class="pagination"><?php
+foreach ($pages as $type => $page) {
+    switch ((string) $type) { // странное поведение, потому каст к строке
+        case 'minus':
+            ?><li class="page-item"><a class="page-link" href="<?= $baseURL ?>page=<?= $page ?>">&lt;&lt;</a></li><?php
+        break;
+        case 'leftDots':
+        case 'rightDots':
+            ?><li class="page-item disabled"><a class="page-link" href="<?= $baseURL ?>#"><?= $page ?></a></li><?php
+        break;
+        case 'current':
+            ?><li class="page-item active"><a class="page-link" href="<?= $baseURL ?>#"><?= $page ?></a></li><?php
+        break;
+        case 'plus':
+            ?><li class="page-item"><a class="page-link" href="<?= $baseURL ?>page=<?= $page ?>">&gt;&gt;</a></li><?php
+        break;
+        default:
+             ?><li class="page-item"><a class="page-link" href="<?= $baseURL ?>page=<?= $page ?>"><?= $page ?></a></li><?php
+        break;
+    }
+}
+?></ul><?php

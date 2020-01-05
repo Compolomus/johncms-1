@@ -37,6 +37,7 @@
         "ext-pdo": "*",
         "ext-simplexml": "*",
         "aura/autoload": "^2.0",
+        "compolomus/pagination": "^1.1",
         "intervention/image": "^2.5",
         "james-heinrich/getid3": "^1.9",
         "johncms/system": "dev-develop",
@@ -44,7 +45,6 @@
         "verot/class.upload.php": "^2.0"
     },
     "require-dev": {
-        "jakub-onderka/php-parallel-lint": "^1.0",
         "roave/security-advisories": "dev-master",
         "squizlabs/php_codesniffer": "^3.5"
     },
@@ -55,11 +55,9 @@
     },
     "scripts": {
         "check": [
-            "@lint",
             "@cs-check"
         ],
         "cs-check": "phpcs",
-        "cs-fix": "phpcbf",
-        "lint": "parallel-lint config install modules system themes --exclude system/vendor"
+        "cs-fix": "phpcbf"
     }
 }
